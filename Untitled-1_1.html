@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VR & AR Gaming Showcase</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#090b1a;
+    color:white;
+    line-height:1.6;
+}
+
+header{
+    background:linear-gradient(135deg,#6200ea,#00c6ff);
+    text-align:center;
+    padding:50px 20px;
+}
+
+header h1{
+    font-size:45px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+nav{
+    background:#111;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:15px;
+    position:sticky;
+    top:0;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#00e5ff;
+}
+
+section{
+    padding:60px 8%;
+}
+
+h2{
+    color:#00e5ff;
+    margin-bottom:20px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1b1f38;
+    padding:20px;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0px 0px 20px cyan;
+}
+
+.animation-area{
+    display:flex;
+    justify-content:center;
+    margin-top:30px;
+}
+
+.cube{
+    width:150px;
+    height:150px;
+    background:linear-gradient(45deg,#00e5ff,#6200ea);
+    animation:rotate 5s linear infinite;
+    border-radius:20px;
+}
+
+@keyframes rotate{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+table th,table td{
+    border:1px solid #444;
+    padding:15px;
+    text-align:center;
+}
+
+table th{
+    background:#6200ea;
+}
+
+table tr:nth-child(even){
+    background:#1a1a2e;
+}
+
+.future{
+    background:#10132b;
+    border-left:6px solid cyan;
+    padding:20px;
+    border-radius:10px;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    background:#00e5ff;
+    color:black;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+}
+
+button:hover{
+    background:white;
+}
+
+footer{
+    background:#111;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+
+@media(max-width:768px){
+header h1{
+font-size:32px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🎮 VR & AR Gaming Showcase</h1>
+<p>Discover the Future of Immersive Gaming</p>
+
+<button onclick="showMessage()">Explore Now</button>
+
+</header>
+
+<nav>
+<a href="#overview">Overview</a>
+<a href="#animation">3D Animation</a>
+<a href="#devices">Devices</a>
+<a href="#future">Future</a>
+</nav>
+
+<section id="overview">
+
+<h2>VR & AR Technology Overview</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🥽 Virtual Reality (VR)</h3>
+<p>
+Virtual Reality creates a fully immersive digital environment using VR headsets. Players experience games as if they are inside the virtual world.
+</p>
+</div>
+
+<div class="card">
+<h3>📱 Augmented Reality (AR)</h3>
+<p>
+Augmented Reality overlays digital objects onto the real world through smartphones or AR glasses, blending virtual content with reality.
+</p>
+</div>
+
+<div class="card">
+<h3>🎯 Benefits</h3>
+<p>
+• Immersive Gameplay<br>
+• Motion Tracking<br>
+• Realistic Interaction<br>
+• Better Learning Experience
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="animation">
+
+<h2>Interactive 3D Animation</h2>
+
+<p>Click the cube to change its color.</p>
+
+<div class="animation-area">
+<div class="cube" id="cube"></div>
+</div>
+
+</section>
+
+<section id="devices">
+
+<h2>VR & AR Device Comparison</h2>
+
+<table>
+
+<tr>
+<th>Device</th>
+<th>Technology</th>
+<th>Features</th>
+<th>Best For</th>
+</tr>
+
+<tr>
+<td>Meta Quest 3</td>
+<td>VR</td>
+<td>Wireless, Hand Tracking</td>
+<td>Gaming</td>
+</tr>
+
+<tr>
+<td>PlayStation VR2</td>
+<td>VR</td>
+<td>Eye Tracking, 4K HDR</td>
+<td>Console Gaming</td>
+</tr>
+
+<tr>
+<td>Microsoft HoloLens</td>
+<td>AR</td>
+<td>Mixed Reality</td>
+<td>Education & Industry</td>
+</tr>
+
+<tr>
+<td>Apple Vision Pro</td>
+<td>AR/VR</td>
+<td>Spatial Computing</td>
+<td>Entertainment & Productivity</td>
+</tr>
+
+</table>
+
+</section>
+
+<section id="future">
+
+<h2>Future of Gaming</h2>
+
+<div class="future">
+
+<p>
+
+The future of gaming lies in immersive technologies where VR and AR combine with Artificial Intelligence, Cloud Gaming, and the Metaverse.
+
+Soon gamers will experience:
+
+</p>
+
+<br>
+
+<ul>
+
+<li>✔ AI-powered NPCs</li>
+<li>✔ Full-body motion tracking</li>
+<li>✔ Haptic feedback suits</li>
+<li>✔ Cloud VR gaming</li>
+<li>✔ Multiplayer virtual worlds</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>VR & AR Gaming Showcase</h3>
+
+<p>
+Designed using HTML, CSS & JavaScript
+</p>
+
+</footer>
+
+<script>
+
+function showMessage(){
+alert("Welcome to the VR & AR Gaming Showcase!");
+}
+
+let cube=document.getElementById("cube");
+
+cube.onclick=function(){
+
+let colors=[
+"linear-gradient(45deg,#ff1744,#ff9100)",
+"linear-gradient(45deg,#00e676,#00b0ff)",
+"linear-gradient(45deg,#7c4dff,#18ffff)",
+"linear-gradient(45deg,#ffea00,#ff4081)"
+];
+
+cube.style.background=colors[Math.floor(Math.random()*colors.length)];
+
+}
+
+</script>
+
+</body>
+</html>
